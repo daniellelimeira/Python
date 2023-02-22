@@ -1,22 +1,20 @@
-escolha_menu = int(input('Menu:\nEscolha uma das opções:\n1 - Digitar a data de emprestimo\n0 - Sair da biblioteca\n'))
-contador = 0
-datas = []
-dia = []
-mes = []
-ano = []
+menu = int(input('------\n Menu\n------\n\n1 - Cadastrar data de emprestimo\n0 - Sair da biblioteca\n'))
+datas = list()
+dia = list()
+mes = list()
+ano = list()
 
-if escolha_menu == 1:
-    for contador in range(0, 2):
+if menu == 1:
+    for c in range(0, 2):
         print('----------------\nNOVO EMPRESTIMO\n----------------')
-        dia.insert(contador, int(input('Digite o dia do emprestimo: ')))
-        mes.insert(contador, int(input("Digite o mes do emprestimo: ")))
-        ano.insert(contador, int(input("Digite o ano do emprestimo: ")))
-    datas.insert(1, dia)
-    datas.insert(2, mes)
-    datas.insert(3, ano)
+        dia.insert(c, int(input('Digite o dia do emprestimo: ')))
+        mes.insert(c, int(input('Digite o mes do emprestimo: ')))
+        ano.insert(c, int(input('Digite o ano do emprestimo: ')))
+    datas.insert(0, dia[:])
+    datas.insert(1, mes[:])
+    datas.insert(2, ano[:])
     print(datas)
 else:
-    print('Você saiu da biblioteca com sucesso!')
+    print('Voce saiu da biblioteca!')
 
-for i in range(0, 2):
-    print(f'Data {i + 1}: {dia[i]}/{mes[i]}/{ano[1]}')
+
