@@ -1,0 +1,8 @@
+# Nome na vertical em escada. Modifique o programa anterior de 
+# forma a mostrar o nome em formato de escada.
+
+nome = str(input('Digite seu nome: ')).upper()
+i = 0
+while i <= len(nome):
+    print(f'{nome[:i]}')
+    i += 1
